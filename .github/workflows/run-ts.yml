@@ -1,0 +1,8 @@
+            - name: Action.ts
+  # You may pin to the exact commit or the version.
+  # uses: pabio/github-actions-starter@90af8d7f8486a4ec9a1aff86a9bd394a1d317adf
+  uses: pabio/github-actions-starter@v1.0.2
+  with:
+    # Number of milliseconds to wait
+    milliseconds: # default is 1000
+          
