@@ -1,0 +1,27 @@
+name: Run TypeScript
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  run-ts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Compile TypeScript
+        run: npx tsc
+
+      - name: Run code
+        run: node dist/index.js   # depends on your output folder
